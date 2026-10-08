@@ -1,6 +1,6 @@
 // Named settings (the 600+ `set` variables of the firmware CLI).
 //
-// Fast path: this fork's MSP2_CLI_SETTING / MSP2_CLI_SETTING_INFO (one MSP round trip per
+// Fast path: MSP2_CLI_SETTING / MSP2_CLI_SETTING_INFO (one MSP round trip per
 // setting). Fallback for stock firmware: the CLI `get` command over the CliRunner.
 // Every write validates against the setting's metadata first, skips unchanged values
 // (idempotent), and reads the value back to verify.

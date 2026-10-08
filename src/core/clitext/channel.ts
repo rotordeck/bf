@@ -2,7 +2,7 @@
 //
 // Two transports, both side-effect free (no reboot, no ARMING_DISABLED_CLI latch):
 //
-//  * Msp2CliCommand – this firmware fork's MSP2_CLI_COMMAND (0x3012): the command runs inside
+//  * Msp2CliCommand – MSP2_CLI_COMMAND (Betaflight master, needs USE_MSP_CLI_COMMAND) (0x3012): the command runs inside
 //    an MSP request, output is paged back in windows. Output is capped at
 //    MSP_CLI_COMMAND_BUFFER_SIZE (2048 by default): longer output comes back with the
 //    TRUNCATED flag and we re-run the line over STX.

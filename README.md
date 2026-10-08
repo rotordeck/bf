@@ -62,7 +62,7 @@ bf config apply quad.yaml        # a second run reports "no changes"
 
 **MSP.** Binary MSP v1/v2 carries identity, status, live telemetry, motor test, calibration, profiles, dataflash, OSD font, DShot commands and reboot. The codecs follow the firmware's `msp.c`.
 
-**Named settings.** These use the fork's `MSP2_CLI_SETTING` / `MSP2_CLI_SETTING_INFO`, which give typed metadata per setting. On stock firmware they fall back to the CLI `get`.
+**Named settings.** These use `MSP2_CLI_SETTING` / `MSP2_CLI_SETTING_INFO` (Betaflight master, 2026.12 development), which give typed metadata per setting. On older firmware they fall back to the CLI `get`.
 
 **Command lines** (`diff`, `dump`, `aux`, `serial`, presets, restore):
 - `MSP2_CLI_COMMAND` where the firmware has it.
@@ -86,6 +86,10 @@ make -C betaflight TARGET=SITL
 (cd /tmp && while true; do ~/path/betaflight/obj/main/betaflight_SITL.elf; done) &   # SITL exits on reboot
 npm test
 ```
+
+## Changelog and upstream sync
+
+[`docs/CHANGELOG.md`](docs/CHANGELOG.md) lists changes and records the Betaflight and Configurator commits `bf` is synced to. `scripts/upstream-check.sh` reports relevant upstream changes since that baseline. The Claude Code skill in `.claude/skills/upstream-sync/` walks through porting them and moving the baseline.
 
 ## Layout
 
