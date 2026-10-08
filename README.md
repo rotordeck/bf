@@ -12,16 +12,19 @@ It follows the API + CLI + Skills design in [`agent_oriented_cli_design_principl
 
 ## Install
 
-Run it without installing (straight from GitHub):
+Run it without installing. npm ≥ 12 blocks git and URL packages unless you allow them:
 
 ```sh
-npx github:rotordeck/bf info
+# latest release
+npx --allow-remote=all https://github.com/rotordeck/bf/releases/download/v0.1.0/rotordeck-bf-0.1.0.tgz info
+# current main branch (builds on install)
+npx --allow-git=all github:rotordeck/bf info
 ```
 
 Or install globally:
 
 ```sh
-npm install -g github:rotordeck/bf
+npm install -g --allow-git=all github:rotordeck/bf
 bf --help
 ```
 
