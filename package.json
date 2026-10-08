@@ -1,0 +1,39 @@
+{
+  "name": "bf",
+  "version": "0.1.0",
+  "description": "Agent-oriented command line interface for configuring Betaflight flight controllers",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "bin": {
+    "bf": "dist/cli/main.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "skills"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli/main.ts",
+    "test": "vitest run",
+    "lint": "eslint src test",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "serialport": "^13.0.0",
+    "usb": "^3.2.1",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.4",
+    "eslint": "^10.12.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^5.0.3"
+  }
+}

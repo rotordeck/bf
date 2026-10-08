@@ -1,0 +1,6 @@
+node_modules
+dist
+*.bbl
+/betaflight/
+/betaflight-configurator/
+BTFL_backup_*.txt
