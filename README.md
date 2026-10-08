@@ -12,10 +12,23 @@ It follows the API + CLI + Skills design in [`agent_oriented_cli_design_principl
 
 ## Install
 
+Run it without installing (straight from GitHub):
+
 ```sh
-npm install
-npm run build
-npm link            # puts `bf` on your PATH
+npx github:rotordeck/bf info
+```
+
+Or install globally:
+
+```sh
+npm install -g github:rotordeck/bf
+bf --help
+```
+
+From a clone:
+
+```sh
+npm install && npm link   # `prepare` builds dist/
 ```
 
 Linux: your user needs access to the serial device (group `uucp` or `dialout`). Flashing over DFU needs a udev rule for `0483:df11`.
