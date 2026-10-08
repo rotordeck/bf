@@ -17,6 +17,8 @@ Upstream: <https://github.com/betaflight/betaflight>, <https://github.com/betafl
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-08
+
 ### Added
 - `skills/bf-cli`: how to run `bf` (npx, global install), connect, parse the JSON contract, handle exit codes, write safely, and troubleshoot.
 - Published to npm as `@rotordeck/bf`.

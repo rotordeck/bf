@@ -1,6 +1,6 @@
 {
   "name": "@rotordeck/bf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Agent-oriented command line interface for configuring Betaflight flight controllers",
   "license": "AGPL-3.0-or-later",
   "type": "module",
