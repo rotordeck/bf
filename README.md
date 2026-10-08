@@ -8,25 +8,16 @@ It follows the API + CLI + Skills design in [`agent_oriented_cli_design_principl
 |---|---|---|
 | API | `src/core/` | MSP protocol, transports, CLI-over-MSP, typed services. No console I/O. |
 | CLI | `src/cli/` | Argument parsing, output envelope, exit codes. No Betaflight logic; an eslint rule and a test enforce the boundary. |
-| Skills | `skills/betaflight/` | `SKILL.md` and workflow guides that teach an agent the vocabulary and safe procedures. |
+| Skills | `skills/bf-cli/`, `skills/betaflight/` | How to drive the CLI (install, JSON contract, safe writes), plus Betaflight workflow guides. Copy them to `~/.claude/skills/` for Claude Code. |
 
 ## Install
 
-Run it without installing. npm ≥ 12 blocks git and URL packages unless you allow them:
-
 ```sh
-# latest release
-npx --allow-remote=all https://github.com/rotordeck/bf/releases/download/v0.1.0/rotordeck-bf-0.1.0.tgz info
-# current main branch (builds on install)
-npx --allow-git=all github:rotordeck/bf info
+npx @rotordeck/bf info            # run without installing
+npm install -g @rotordeck/bf      # or install the `bf` command
 ```
 
-Or install globally:
-
-```sh
-npm install -g --allow-git=all github:rotordeck/bf
-bf --help
-```
+Unreleased `main` (npm ≥ 12 needs the flag): `npx --allow-git=all github:rotordeck/bf info`.
 
 From a clone:
 

@@ -5,7 +5,7 @@ description: Configure Betaflight FPV flight controllers with the `bf` command l
 
 # Betaflight via `bf`
 
-`bf` talks to a Betaflight flight controller (FC) over USB, or over TCP for the simulator. It covers everything the Betaflight Configurator can do. Each invocation connects, does one thing and disconnects, so there is no session to manage.
+`bf` talks to a Betaflight flight controller (FC) over USB, or over TCP for the simulator. Run it with `npx @rotordeck/bf ...` (or alias `bf='npx --yes @rotordeck/bf'`). For how to drive the tool (JSON contract, discovery, safe-write patterns, troubleshooting), see the `bf-cli` skill. It covers everything the Betaflight Configurator can do. Each invocation connects, does one thing and disconnects, so there is no session to manage.
 
 ## Contract (rely on it)
 
